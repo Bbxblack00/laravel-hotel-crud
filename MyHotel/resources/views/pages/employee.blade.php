@@ -2,14 +2,14 @@
 
 @section('principal')
 
-    @foreach ($workers as $worker)
+    {{-- @foreach ($workers as $worker)
 
     <a href="{{ route ('Employee', $worker -> id) }}">
         [{{ $worker -> id }}] -> {{ $worker -> firtsname }} {{ $worker -> lastname }}
     </a>
         
-    @endforeach
+    @endforeach --}}
 
-    {{-- <h1>HELLO</h1> --}}
+    <h1>HELLO</h1>
     
 @endsection
