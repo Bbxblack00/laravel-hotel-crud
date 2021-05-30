@@ -2,14 +2,15 @@
 
 @section('principal')
 
-    {{-- @foreach ($workers as $worker)
+    <h1>{{ $worker -> firstname}}</h1>
+    <h2>{{ $worker -> lastname }}</h2>
 
-    <a href="{{ route ('Employee', $worker -> id) }}">
-        [{{ $worker -> id }}] -> {{ $worker -> firtsname }} {{ $worker -> lastname }}
-    </a>
-        
-    @endforeach --}}
+    <br>
 
-    <h1>HELLO</h1>
+    <h2> RUOLO: {{ $worker -> role }}</h2>
+
+    <br>
+
+    <h2> Ral: {{ $worker -> ral }}</h2>
     
 @endsection
