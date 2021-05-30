@@ -14,15 +14,12 @@ class NewWorkers extends Migration
     public function up()
     {
         Schema::create('new_workers', function (Blueprint $table) {
-
-            $table->increments('id');
-
-            $table->char('name', 128);
-            $table->char('lastname', 128);
-            $table->integer('age');
-            $table->char('gender', 60);
-            $table->integer('days_off');
-            
+            $table -> id();
+            $table -> string('firstname', 128);
+            $table -> string('lastname', 128);
+            $table -> integer('role');
+            $table -> integer('ral') -> nullable();
+            $table -> timestamps();
         });
     }
 
