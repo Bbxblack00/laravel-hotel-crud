@@ -4,7 +4,7 @@
 
     @foreach ($workers as $worker)
 
-    <a href="{{ route ('Employee', $worker -> id) }}">
+    <a href="{{ route ('employee', $worker -> id) }}">
         [{{ $worker -> id }}] -> {{ $worker -> firtsname }} {{ $worker -> lastname }}
     </a>
         
