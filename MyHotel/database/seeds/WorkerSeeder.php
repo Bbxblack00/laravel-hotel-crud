@@ -1,16 +1,12 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Worker;
 
 class WorkerSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
-        //
+        factory(Worker::class, 50) -> create();
     }
 }
