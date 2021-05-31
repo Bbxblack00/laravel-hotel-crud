@@ -19,6 +19,14 @@
         
     @endforeach
 
+    <div class="row">
+        <a href="{{ route('create') }}">
+            <button class="button">
+                New Worker
+            </button>
+        </a>
+    </div>
+
     {{-- <h1>HELLO</h1> --}}
     
 @endsection
