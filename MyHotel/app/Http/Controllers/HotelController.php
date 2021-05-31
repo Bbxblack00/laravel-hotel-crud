@@ -27,6 +27,17 @@ class HotelController extends Controller{
 
     public function store(Request $request) {
 
-        dd($request -> all());
+        $validate = $request -> validate([
+            'firstname' => 'max:128',
+            'lastname' => 'max:128',
+            'role' => 'max:5|min:1|numeric',
+            'rol' => 'nullable|max:90000|min:15000|numeric'
+        ]);
+
+        // dd($request -> all());
+
+        $worker = Worker::create($validate);
+        return redirect() -> route('employee', $worker -> id);
+
     }
 }
