@@ -13,8 +13,8 @@
         <a href="{{ route ('employee', $worker -> id) }}">
             [{{ $worker -> id }}] -> {{ $worker -> firtsname }} {{ $worker -> lastname }}
         </a>
-        <a href=""><i class="fas fa-pen"></i></a>
-        <a href=""><i class="fas fa-user-minus"></i></a>
+        <a href="{{ route('create') }}"><i class="fas fa-pen"></i></a>
+        <a href="{{ route('destroy', $worker -> id) }}"><i class="fas fa-user-minus"></i></a>
     </div>
         
     @endforeach

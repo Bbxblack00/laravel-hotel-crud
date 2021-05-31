@@ -38,6 +38,14 @@ class HotelController extends Controller{
 
         $worker = Worker::create($validate);
         return redirect() -> route('employee', $worker -> id);
+    }
 
+    public function destroy($workerid) {
+
+        $worker = Worker::findOrFail($workerid);
+
+        $worker -> delete();
+
+        return reirect() -> route('home');
     }
 }

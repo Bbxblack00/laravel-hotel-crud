@@ -26,3 +26,6 @@ Route::get('/create/worker/', 'HotelController@create')
 
 Route::post('/store/worker/', 'HotelController@store')
     -> name('store');
+
+Route::get('/destroy/{id}', 'HotelController@destroy')
+    -> name('destroy');
