@@ -19,4 +19,14 @@ class HotelController extends Controller{
 
         return view('pages.employee', compact('worker'));
     }
+
+    public function create() {
+
+        return view('pages.create');
+    }
+
+    public function store(Request $request) {
+
+        dd($request -> all());
+    }
 }
