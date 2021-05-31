@@ -2,7 +2,7 @@
 
 @section('principal')
 
-    <h1>NEW WORKER</h1>
+    <h1>NEW WORKER: [{{ $worker -> id }}]</h1>
     
     <form method="POST" action="{{ route('store') }}">
         

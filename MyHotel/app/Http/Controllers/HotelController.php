@@ -33,6 +33,22 @@ class HotelController extends Controller{
         return view('pages.edit', compact('worker'));
     }
 
+    public function update(Request $request, $workerid) {
+
+        $validate = $request -> validate([
+            'firstname' => 'max:128',
+            'lastname' => 'max:128',
+            'role' => 'max:5|min:1|numeric',
+            'rol' => 'nullable|max:90000|min:15000|numeric'
+        ]);
+
+        $worker = Worker::findOrFail($workerid);
+
+        $worker = update($validate)
+
+        return redirect() -> route('home');
+    }
+
     public function store(Request $request) {
 
         $validate = $request -> validate([
