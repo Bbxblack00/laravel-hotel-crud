@@ -25,6 +25,14 @@ class HotelController extends Controller{
         return view('pages.create');
     }
 
+    public function edit($workerid) {
+
+        $worker = Worker::findOrFail($workerid);
+
+
+        return view('pages.edit', compact('worker'));
+    }
+
     public function store(Request $request) {
 
         $validate = $request -> validate([
